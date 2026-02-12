@@ -22,7 +22,7 @@ DINAM is part of [PGTMHT (Pretty Good Theory for Mostly Harmless Things)](./PGTM
 
 DINAM is a meta-ontological microkernel built from three primitives: **Nu** (failure of coherent reference), **Alpha** (a minimal anchoring commitment), and **LOOC₀** (a minimal admissibility gate that prevents triviality). From these, DINAM defines **Mu** as the class (not necessarily a set) of all admissible differentiations.
 
-Incompleteness is not assumed at the kernel level. It appears only under an additional capability: a **reflection interface (REF)** enabling (i) naming/quotation, (ii) representable templates, and (iii) a diagonal/fixed-point construction. Under REF, **HIP-Δ** follows: no reflective system can contain a **total and correct** internal procedure that decides its own admissibility for all named candidates.
+Incompleteness is not assumed at the kernel level. It appears only under an additional capability: a **reflection interface (REF)** enabling (i) naming/quotation, (ii) representable templates, and (iii) a diagonal/fixed-point construction. Under REF, **HIP-Δ** follows: no reflective system can contain a **total, correct and internal** procedure that decides its own admissibility for all named candidates.
 
 DINAM therefore replaces "ultimate self-grounding" with explicit minimal commitments and treats incompleteness as a structural consequence of reflection, not as an embarrassment of formalism.
 
@@ -37,9 +37,7 @@ DINAM reframes classic skeptical dialectics - solipsism vs Descartes' cogito, an
 DINAM is a meta-level specification for when a "candidate world/system" is coherently instantiable. It assumes only (i) a minimal existence anchor **Alpha**, and (ii) a nontrivial admissibility test **LOOC₀** that distinguishes coherent candidates from incoherent ones (Nu). It then adds an optional reflection interface **REF**. With REF, a diagonal fixed-point exists and forces **HIP**: no internally total, correct self-validator can exist for reflective systems. The result subsumes familiar undecidability/self-reference limits as instances of the same structural obstruction.
 
 DINAM separates (A) a **meta-level admissibility gate** from (B) **object-level dynamics**. Let **Cand** be a (possibly proper) class of candidate universes/descriptions, and let the meta-gate
-$$
-J:\mathbf{Cand}\to\{\checkmark,\Nu\}
-$$
+$$J:\mathbf{Cand}\to\{\checkmark,\Nu\}$$
 return either "admissible" or "collapse to Nu" (failure of reference).
 
 This kernel is intentionally weaker than "classical logic" and is compatible with classical, intuitionistic, paraconsistent, computational, or physical object-level models. A further capability, **REF**, captures reflection (naming + templates + diagonalization). Under REF, a diagonal obstruction arises (HIP-Δ): no internal algorithm/predicate can be both **total** and **correct** at deciding $J$ for all self-named candidates.
@@ -130,16 +128,12 @@ LOOC₀ does not impose classical logic on object-level universes. Object-level 
 Let **Cand** denote a (possibly proper) class of candidate differentiations.
 
 DINAM introduces a meta-judgment:
-$$
-J:\mathbf{Cand}\to\{\checkmark,\Nu\}
-$$
+$$J:\mathbf{Cand}\to\{\checkmark,\Nu\}$$
 - $J(c)=\checkmark$: $c$ is admissible as a coherent differentiation.
 - $J(c)=\Nu$: $c$ fails coherent reference (collapse to Nu).
 
 Define **Mu** (as a meta-level predicate/class):
-$$
-\Mu(c)\;:\!\iff\;J(c)=\checkmark.
-$$
+$$\Mu(c)\;:\!\iff\;J(c)=\checkmark.$$
 Mu is "everything admissible," without asserting sethood.
 
 
@@ -148,9 +142,7 @@ Mu is "everything admissible," without asserting sethood.
 ### 2.2 LOOC₀ axioms (minimal)
 
 **(L0.1) Alpha-admissibility (nonempty coherence)**
-$$
-J(\alpha)=\checkmark.
-$$
+$$J(\alpha)=\checkmark.$$
 
 **(L0.2) Meta-determinacy of admissibility**
 $J$ is a function: for each candidate $c$, the meta-gate returns exactly one verdict in $\{\checkmark,\Nu\}$.
@@ -158,16 +150,12 @@ $J$ is a function: for each candidate $c$, the meta-gate returns exactly one ver
 This is a meta-level requirement on the *gate*, not a ban on object-level contradiction.
 
 **(L0.3) Nontriviality (anti-vacuity)**
-$$
-\exists c\in\mathbf{Cand}:\;J(c)=\Nu.
-$$
+$$\exists c\in\mathbf{Cand}:\;J(c)=\Nu.$$
 Otherwise "admissible" becomes vacuous.
 
 **(L0.4) Optional anchoring relation (no membership smuggling)**
 If desired, introduce a primitive dependence/anchoring relation $\preceq$ ("is anchored by / depends on") and require:
-$$
-J(c)=\checkmark\Rightarrow \alpha\preceq c.
-$$
+$$J(c)=\checkmark\Rightarrow \alpha\preceq c.$$
 This expresses anchoring without set-membership assumptions.
 
 That is LOOC₀.
@@ -178,9 +166,7 @@ That is LOOC₀.
 ### 2.3 Collapse to Nu (structural meaning)
 
 "Collapse to Nu" means:
-$$
-J(c)=\Nu.
-$$
+$$J(c)=\Nu.$$
 No dynamics, time, or process is implied. It is a structural non-admissibility statement.
 
 ---
@@ -211,9 +197,7 @@ REF is the capability profile (R1–R4) in §4. Under REF, diagonal/fixed-point 
 ### 4.1 Names / quotation
 
 **(R1) Naming / quotation.** Introduce a class **Name** and a quoting map:
-$$
-\ulcorner\cdot\urcorner:\mathbf{Cand}\to\mathbf{Name}
-$$
+$$\ulcorner\cdot\urcorner:\mathbf{Cand}\to\mathbf{Name}$$
 where $\ulcorner c\urcorner$ is an internal name/code/description of candidate $c$ in a reflective universe.
 
 (Instantiations: Gödel numbers; program source; syntax trees; physical encodings.)
@@ -222,9 +206,7 @@ where $\ulcorner c\urcorner$ is an internal name/code/description of candidate $
 ### 4.2 Templates / substitution
 
 **(R2) Representable templates.** A **template** is a constructor:
-$$
-T:\mathbf{Name}\to\mathbf{Cand}.
-$$
+$$T:\mathbf{Name}\to\mathbf{Cand}.$$
 Interpret $T(n)$ as "the candidate produced by template $T$ when fed name $n$."
 
 Crucial restriction: REF assumes diagonalization only for templates that are **expressible/available** to the universe's reflection apparatus (formalizable predicate, computable constructor, definable operator, etc.).
@@ -234,9 +216,7 @@ Crucial restriction: REF assumes diagonalization only for templates that are **e
 
 **(R3) Diagonal / fixed-point closure (for representable templates).**
 For every template $T$ that is representable under REF, there exists a candidate $\delta(T)$ such that:
-$$
-\delta(T)=T(\ulcorner\delta(T)\urcorner).
-$$
+$$\delta(T)=T(\ulcorner\delta(T)\urcorner).$$
 
 This is the abstract fixed-point mechanism behind the diagonal lemma (logic), Kleene's recursion theorem (computation), and Lawvere-style fixed-point theorems (category-theoretic form).
 
@@ -264,15 +244,11 @@ HIP-Δ is a structural diagonal obstruction. It does not claim that systems must
 ### 5.1 What "self-validation" means here (the target)
 
 A universe that tries to internalize admissibility would attempt an internal procedure:
-$$
-\ell:\mathbf{Name}\to\{\checkmark,\Nu\},
-$$
+$$\ell:\mathbf{Name}\to\{\checkmark,\Nu\},$$
 intended as: "given the name of a candidate, decide whether it is admissible."
 
 Call $\ell$ **total and correct** (relative to the meta-gate $J$) if:
-$$
-\forall c\in\mathbf{Cand}:\quad \ell(\ulcorner c\urcorner)=J(c).
-$$
+$$\forall c\in\mathbf{Cand}:\quad \ell(\ulcorner c\urcorner)=J(c).$$
 
 This is the strongest possible form of internal self-validation: the universe perfectly reproduces the meta-gate on all self-named candidates.
 
@@ -287,25 +263,17 @@ This is the strongest possible form of internal self-validation: the universe pe
 **Proof.** Suppose, for contradiction, that such a total, correct $\ell$ exists.
 
 By REF's verdict-dependent construction (R4), form a representable template $T_\ell$ such that for each name $n$,
-$$
-J(T_\ell(n))=\checkmark\iff \ell(n)=\Nu.
-$$
+$$J(T_\ell(n))=\checkmark\iff \ell(n)=\Nu.$$
 
-By diagonal/fixed-point closure (R3), let $c^\*=\delta(T_\ell)$, so
-$$
-c^\* = T_\ell(\ulcorner c^\*\urcorner).
-$$
+By diagonal/fixed-point closure (R3), let $$c_*=\delta(T_\ell)$$, so $$c_* = T_\ell(\ulcorner c_*\urcorner).$$
 
-Then
-$$
-J(c^\*)=\checkmark\iff \ell(\ulcorner c^\*\urcorner)=\Nu.
-$$
+Then $$J(c_*)=\checkmark\iff \ell(\ulcorner c_*\urcorner)=\Nu.$$
 
-But correctness gives $\ell(\ulcorner c^\*\urcorner)=J(c^\*)$. Substituting:
-$$
-J(c^\*)=\checkmark\iff J(c^\*)=\Nu,
-$$
-contradicting LOOC₀'s meta-determinacy (L0.2). ∎
+But correctness gives $\ell(\ulcorner c_*\urcorner)=J(c_*)$.
+
+Substituting: $$J(c_*)=\checkmark\iff J(c_*)=\Nu,$$ contradicting LOOC₀'s meta-determinacy (L0.2).
+
+∎
 
 
 ---
@@ -348,13 +316,9 @@ Let $\mathrm{Coh}_P(s)$ mean "specification $s$ is internally coherent under $P$
 Let $J_0 : \mathrm{Cand}\to\{\checkmark,\Nu\}$ be the kernel admissibility predicate from $\mathrm{LOOC}_0$.
 
 A profile $P$ is a (possibly partial) predicate on kernel-admissible candidates:
-$$
-P:\{c\in\mathrm{Cand}\mid J_0(c)=\checkmark\}\to\{\checkmark,\Nu\}.
-$$
+$$P:\{c\in\mathrm{Cand}\mid J_0(c)=\checkmark\}\to\{\checkmark,\Nu\}.$$
 Define profile-relative admissibility $J_P:\mathrm{Cand}\to\{\checkmark,\Nu\}$ by
-$$
-J_P(c)=\checkmark \;:\!\iff\; \big(J_0(c)=\checkmark \ \wedge\ P(c)=\checkmark\big),
-$$
+$$J_P(c)=\checkmark \;:\!\iff\; \big(J_0(c)=\checkmark \ \wedge\ P(c)=\checkmark\big),$$
 and otherwise $J_P(c)=\Nu$.
 
 ### Realization relations
@@ -368,16 +332,12 @@ These two notions correspond to two different optional strengthenings:
 ### Axiom (Plenitude$_{\mathrm{repr}}$) - catalog plenitude
 
 For every specification $s$,
-$$
-\mathrm{Coh}_P(s)\Rightarrow \exists c\in\mathrm{Cand}\,\big(\mathrm{Realizes}_{\mathrm{repr}}(c,s)\wedge J_P(c)=\checkmark\big).
-$$
+$$\mathrm{Coh}_P(s)\Rightarrow \exists c\in\mathrm{Cand}\,\big(\mathrm{Realizes}_{\mathrm{repr}}(c,s)\wedge J_P(c)=\checkmark\big).$$
 
 ### Axiom (Plenitude$_{\mathrm{impl}}$) - realization plenitude
 
 For every specification $s$,
-$$
-\mathrm{Coh}_P(s)\Rightarrow \exists c\in\mathrm{Cand}\,\big(\mathrm{Realizes}_{\mathrm{impl}}(c,s)\wedge J_P(c)=\checkmark\big).
-$$
+$$\mathrm{Coh}_P(s)\Rightarrow \exists c\in\mathrm{Cand}\,\big(\mathrm{Realizes}_{\mathrm{impl}}(c,s)\wedge J_P(c)=\checkmark\big).$$
 
 Either axiom may be adopted by a profile; Plenitude$_{\mathrm{impl}}$ is the stronger claim (it asserts admissible implementations/models, not merely admissible descriptions).
 
@@ -590,7 +550,9 @@ Everything else is optional elaboration.
 If an objection denies HIP-Δ while accepting LOOC₀ + REF, it must locate which REF clause fails (R1–R4) or which LOOC₀ clause is rejected.
 
 
-### 9. Application Areas
+## 12. Application Areas
+
+*Also see [Applications and Overview](./DINAM-Applications_and_Overview.md).*
 
 DINAM is system-agnostic. Because it makes minimal commitments (a tiny "kernel" + an admissibility gate), it can be used as a framework lens across many domains, including:
 
@@ -612,12 +574,12 @@ DINAM **does not replace** domain theories; it clarifies **their minimal commitm
 * Free will vs determinism; consciousness and the "Hard Problem", problem of other minds
 * Idea-splits: realism vs idealism vs pragmatism, monism vs dualism vs pluralism
 
-#### 9.1 Notes on "Monad"-like language
+#### 12.1 Notes on "Monad"-like language
 
 DINAM can sound superficially similar to "Monad" talk in metaphysics, but it is not a maximalist, all-encompassing, supreme entity hypothesis. If anything, DINAM does **the opposite**: it **dissects the monad impulse** into minimal, explicit components (a bare existence anchor + a coherence/admissibility gate), and refuses to inflate those components into "maximal mind", "supreme substance", or "ultimate chooser".
 
 
-#### 9.2 Application Areas (additional)
+#### 12.2 Application Areas (additional)
 
 DINAM can also be used as a framework lens for analyzing ontological and cosmological argument families:
 
